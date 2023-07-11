@@ -53,3 +53,22 @@ window.addEventListener('load', function() {
   generateStars();
   generateBalls();
 });
+
+function submitForm(event) {
+  event.preventDefault();
+  const email = document.getElementById('email').value;
+  
+  // Here, you can implement your logic to send the password reset email
+  
+  openPopup();
+  document.getElementById('password-reset-form').reset();
+}
+
+function openPopup() {
+  document.getElementById('popup').classList.remove('hidden');
+}
+
+function closePopup() {
+  document.getElementById('popup').classList.add('hidden');
+  window.location.href = 'index.html';
+}
